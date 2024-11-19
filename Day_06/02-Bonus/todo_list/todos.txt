@@ -1,0 +1,5 @@
+clean
+play
+throw
+fix
+fix
