@@ -1,6 +1,8 @@
-# PYTHON MEGA COURSE: LEARN PYTHON IN 60 DAYS, BUILD 20 APPS
+# PYTHON - AUTOMATIZACIÓN DE TAREAS
 
 Desde Day_01 a Day_20 se enseña lo básico de Python, apoyado por la creación de una app de tareas que se hace tanto como app de consola, escritorio y web app.
+
+Luego comenzamos con la automatización, ya no con nombre Day_xx sino con el nombre que indica el tipo de automatización a realizar.
 
 ## Day_01
 
@@ -576,3 +578,63 @@ Desde Day_01 a Day_20 se enseña lo básico de Python, apoyado por la creación 
 - NOTAS:
     - En este día se hace un repaso de todo lo aprendido en los últimos 19 días
     - Se adjuntan apuntes en Pdf y en formato Jupyter Notebook
+
+## Browser_Automation_And_Web_Scraping
+- Hacemos scraping de un texto estático
+    - example_01.py
+- Hacemos scraping de un número dinámico
+    - example_02.py
+- Hacemos acciones en una página de login, mandando usuario y contraseña, pulsando Intro y haciendo click en el botón Home de la página a la que se accede tras el login
+    - example_03.py
+- Primer Ejercicio donde hacemos el login, pulsamos el botón home y recuperamos el número dinámico
+    - exercise_01.py
+- Segundo Ejercicio donde hacemos el login, pulsamos el botón home, y cada dos segundos recuperamos el número dinámico y lo guardamos en un nuevo fichero
+    - exercise_02.py
+- Tercer Ejercicio donde practicamos con otra web para cimentar los conocimientos de Scraping
+    - Voy a ir a la página de Vaadin.com, hacer login con el mail / password y pulsar el href Whistleblowing
+    - exercise_03.py
+- Ejemplo donde aprendemos a descargar datos bursátiles históricos usando Python
+    - La data la vamos a coger de `finance.yahoo.com`
+    - Se van a hacer HTTP requests
+    - Aunque no se usa en el programa, se indica como transformar una fecha string a epoch
+    - example_04.py
+- Usamos Beautiful Soup para hacer scraping de una página y obtener el valor de cambio de una moneda
+    - Más adelante en el curso (versión GUI) haremos una app de escritorio para poder seleccionar las monedas
+    - example_05.py
+- NOTAS:
+    - Selenium es una biblioteca de Python de terceros que se utiliza para automatizar acciones del navegador
+        - Documentación: `https://www.selenium.dev/documentation/`
+    - En esta automatización vamos a hacer scraping de una página web
+        - Para obtener texto estático y el número dinámico: `http://automated.pythonanywhere.com`
+        - Para hacer acciones en el login: `http://automated.pythonanywhere.com/login/`
+            - usuario: automated
+            - password: automatedautomated
+    - Para instalar Selenium: `pip install selenium`
+    - La web de Selenium WebDriver es: `https://www.selenium.dev/documentation/webdriver/`
+    - WebDriver es una herramienta que nos permite instruir el comportamiento del navegador web, y tenemos acceso a WebDriver desde Python usando Selenium
+    - Y para descargar el driver para Selenium en los distintos navegadores: `https://www.selenium.dev/selenium/docs/api/py/index.html#drivers`
+        - Se necesita saber qué versión de navegador tenemos. Para ello acceder a: `https://www.whatismybrowser.com/`
+        - En Ubuntu no he tenido que instalar ningún driver, pero es porque Selenium 4 lo hace todo automáticamente y ya no hace falta el driver
+    - Si el valor que queremos scrapear no aparece hasta pasado un tiempo, podemos usar la librería `time` y el método `sleep(2)` donde 2 son los segundos que espera
+        - Documentación: `https://docs.python.org/3/library/time.html`
+    - En vez de `time`, si necesitamos esperar a que aparezca un botón, es mejor importar `from selenium.webdriver.support.ui import WebDriverWait` y usar, por ejemplo:
+        -  `WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/nav/div/a')))`
+        - Documentación: `https://selenium-python.readthedocs.io/waits.html`
+    - Para copiar un `Xpath` de una web:
+        - Acceder al modo desarrollador
+        - Buscar lo que queremos obtener con el scraping
+        - Pulsar botón derecho en el inspector, seleccionar `Copiar/Xpath`
+        - No siempre vamos a obtener el Xpath porque la estructura HTML puede ser complicada. En ese caso tendremos que usar la lógica
+            - En Chrome tenemos la opción `Copy full Xpath` en el mismo menú donde tenemos `Xpath`
+    - Si el elemento al que queremos acceder tiene un `id`, podemos usarlo también. Es la solución más robusta
+    - Documentación datetime: `https://docs.python.org/3/library/datetime.html`
+        - datetime.now() nos da la fecha/hora actual
+        - Su tipo es datetime
+    - Documentación para hacer click en un checkbox que verifica si eres humano
+        - `https://stackoverflow.com/questions/76575298/how-to-click-on-verify-you-are-human-checkbox-challenge-by-cloudflare-using-se.`
+    - Documentación para enviar HTTP/1.1 requests y descargar ficheros
+        - `https://docs.python-requests.org/en/latest/`
+    - Aprendemos también a usar Beautiful Soup para hacer scraping de una página
+        - La diferencia entre Selenium y Beautiful Soup es que Selenium se usa más para automatizaciones del navegador, mientras que Beautiful Soup se usa solo para extraer data de una web (puro scraping, sin abrir el navegador siquiera)
+        - Beautiful Soup está hecho para entender la estructura HTML
+        - Instalar con el comando: `pip install beautifulsoup4`
