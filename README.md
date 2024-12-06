@@ -653,9 +653,16 @@ Luego comenzamos con la automatización, ya no con nombre Day_xx sino con el nom
     - Documentación: `https://openweathermap.org/forecast5`
     - exercise_01.py
     - data.txt
+- Vamos a usar Flask para crear nuestra propia API que servirá los tipos de cambio de moneda actuales al cliente que los solicite
+- Ejecutar y probar con la URL siguiente: `http://127.0.0.1:5000/api/v1/usd-eur`
+- Para separar esta nueva app, creamos la carpeta `currency`
+    - main.py
 - NOTAS:
     - En concreto vamos a trabajar con REST APIs, que son las más comunes
     - Documentación sobre requests: `https://docs.python-requests.org/en/latest/`
         - Utilizamos esta librería para acceder a las APIs externas
     - Utilizo la biblioteca `dotenv` para trabajar con variables de entorno
         - Instalar con el comando: `pip install python-dotenv`
+    - Usamos Flask para construir nuestra propia API
+        - Documentación: `https://flask.palletsprojects.com/en/stable/`
+        - Instalar con el comando: `pip install flask`
