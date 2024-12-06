@@ -4,7 +4,7 @@ import os
 
 
 def get_news(topic, from_date, to_date, language='en'):
-    path = os.path.join(os.path.dirname(__file__), './API_KEY.txt')
+    path = os.path.join(os.path.dirname(__file__), './NEWS_API_KEY.txt')
     with open(path, 'r') as file:
         key = file.readline()
         # Cuidado con los espacios en blanco al final, que los toma como parte de la key y falla!!!!!

@@ -641,14 +641,21 @@ Luego comenzamos con la automatización, ya no con nombre Day_xx sino con el nom
 
 ## Accessing APIs | Building APIs
 - En esta sección usaremos Python para acceder a varias APIs y crearemos nuestra propia API
-- Para estos ejemplos, sustituir el nombre `API_KEY_template.txt` por `API_KEY.txt` e indicar la API KEY donde se indica `<mykey>`
+- Para estos ejemplos, sustituir el nombre `NEWS_API_KEY_template.txt` por `NEWS_API_KEY.txt` e indicar la API KEY donde se indica `<mykey>`
+    - Obtenemos la API Key de la web siguiente: `https://newsapi.org/`
     - example_01.py
         - Accederemos a los principales titulares de un topic en unas fechas concretas y en un idioma
     - example_02.py
         - Accederemos a los principales titulares de un país en particular
+- Ejercicio para usar Weather Forecast API
+- Para este ejercicio uso `.env` y hay que sustituir el nombre `.env.template` por `.env` e indicar el valor de la API KEY
+    - Obtenemos la API Key de la web siguiente: `https://openweathermap.org`
+    - Documentación: `https://openweathermap.org/forecast5`
+    - exercise_01.py
+    - data.txt
 - NOTAS:
     - En concreto vamos a trabajar con REST APIs, que son las más comunes
-    - Obtenemos la API key de la web siguiente: `https://newsapi.org/`
     - Documentación sobre requests: `https://docs.python-requests.org/en/latest/`
         - Utilizamos esta librería para acceder a las APIs externas
-
+    - Utilizo la biblioteca `dotenv` para trabajar con variables de entorno
+        - Instalar con el comando: `pip install python-dotenv`

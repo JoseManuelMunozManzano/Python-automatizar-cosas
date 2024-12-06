@@ -4,7 +4,7 @@ import os
 
 
 def get_key():
-    path = os.path.join(os.path.dirname(__file__), './API_KEY.txt')
+    path = os.path.join(os.path.dirname(__file__), './NEWS_API_KEY.txt')
     with open(path, 'r') as file:
         # Cuidado con los espacios en blanco al final, que los toma como parte de la key y falla!!!!!
         # Para eso utilizo strip(), para eliminarlos.

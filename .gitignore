@@ -4,5 +4,6 @@ build
 dist
 gui.spec
 
-API_KEY.txt
+NEWS_API_KEY.txt
+.env
 .vscode
