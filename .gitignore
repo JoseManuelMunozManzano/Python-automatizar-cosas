@@ -3,3 +3,6 @@ __pycache__
 build
 dist
 gui.spec
+
+API_URL.txt
+.vscode

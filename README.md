@@ -638,3 +638,14 @@ Luego comenzamos con la automatización, ya no con nombre Day_xx sino con el nom
         - La diferencia entre Selenium y Beautiful Soup es que Selenium se usa más para automatizaciones del navegador, mientras que Beautiful Soup se usa solo para extraer data de una web (puro scraping, sin abrir el navegador siquiera)
         - Beautiful Soup está hecho para entender la estructura HTML
         - Instalar con el comando: `pip install beautifulsoup4`
+
+## Accessing APIs | Building APIs
+- En esta sección usaremos Python para acceder a varias APIs y crearemos nuestra propia API
+- Para estos ejemplos, sustituir el nombre `API_URL_template.txt` por `API_URL.txt` e indicar la API KEY donde se indica `<mykey>`
+    - example_01.py
+- NOTAS:
+    - En concreto vamos a trabajar con REST APIs, que son las más comunes
+    - Obtenemos la API key de la web siguiente: `https://newsapi.org/`
+    - Documentación sobre requests: `https://docs.python-requests.org/en/latest/`
+        - Utilizamos esta librería para acceder a las APIs externas
+

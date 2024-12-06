@@ -1,0 +1,1 @@
+https://newsapi.org/v2/everything?qInTitle={0}&from={1}&to={2}&sortBy=popularity&language={3}&apiKey=<mykey>
