@@ -4,15 +4,15 @@ import os
 
 
 def get_news(topic, from_date, to_date, language='en'):
-    path = os.path.join(os.path.dirname(__file__), './API_URL.txt')
+    path = os.path.join(os.path.dirname(__file__), './API_KEY.txt')
     with open(path, 'r') as file:
-        url = file.readline()
+        key = file.readline()
         # Cuidado con los espacios en blanco al final, que los toma como parte de la key y falla!!!!!
         # Para eso utilizo strip(), para eliminarlos.
-        url = url.replace('{0}', topic).replace('{1}', from_date).replace('{2}', to_date).replace('{3}', language).strip()
+        key = key.strip()
         
     # La forma en la que nuestra app de Python se está comunicando con esta API es a través de parámetros de URL.
-    r = requests.get(url)
+    r = requests.get(f"https://newsapi.org/v2/everything?qInTitle={topic}&from={from_date}&to={to_date}&sortBy=popularity&language={language}&apiKey={key}")
     # El content viene como un diccionario. Cogemos solo el value de la key articles.
     # articles está conectado a una list de diccionarios.
     # En el ejemplo obtenemos el título del primer article.

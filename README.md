@@ -641,8 +641,11 @@ Luego comenzamos con la automatización, ya no con nombre Day_xx sino con el nom
 
 ## Accessing APIs | Building APIs
 - En esta sección usaremos Python para acceder a varias APIs y crearemos nuestra propia API
-- Para estos ejemplos, sustituir el nombre `API_URL_template.txt` por `API_URL.txt` e indicar la API KEY donde se indica `<mykey>`
+- Para estos ejemplos, sustituir el nombre `API_KEY_template.txt` por `API_KEY.txt` e indicar la API KEY donde se indica `<mykey>`
     - example_01.py
+        - Accederemos a los principales titulares de un topic en unas fechas concretas y en un idioma
+    - example_02.py
+        - Accederemos a los principales titulares de un país en particular
 - NOTAS:
     - En concreto vamos a trabajar con REST APIs, que son las más comunes
     - Obtenemos la API key de la web siguiente: `https://newsapi.org/`
